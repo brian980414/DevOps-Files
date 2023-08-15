@@ -1,0 +1,20 @@
+version: '3.7'
+
+services:
+  frontend:
+    image: "brianrestrepo98/frontendapp:v3"
+    restart: unless-stopped
+    volumes:
+      - shared_data:/dist
+
+  backend:
+    image: "brianrestrepo98/djangoappforgithubactions:v1"
+    restart: unless-stopped
+    depends_on:
+      - frontend
+    ports:
+      - "8000:8000"
+    volumes:
+      - shared_data:/dist
+volumes:
+  shared_data:
