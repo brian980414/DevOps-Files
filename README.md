@@ -68,6 +68,3 @@ minikube stop
 ```
 
 ---
-
-## ❓ Need Help?
-If you encounter any issues, feel free to contact me at: **+57 301 519 1221**
